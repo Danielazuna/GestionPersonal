@@ -44,11 +44,70 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
+<<<<<<< HEAD
                     <a href="/variables" class="sidebar-link">
                         <i class="bi bi-list-ul"></i>
                         <span >Elementos Sistema</span>
                     </a>
                 </li>
+=======
+                    <a href="/curso" class="sidebar-link">
+                        <i class="bi bi-book-fill"></i>
+                        <span >Cursos</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#solicitudesSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="sidebar-link dropdown-toggle">
+                        <i class="bi bi-calendar-check-fill"></i>
+                        <span>Solicitudes</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="solicitudesSubmenu">
+                        <li class="sidebar-item">
+                            <a href="/solicitudes/vacaciones" class="sidebar-link">Vacaciones</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/solicitudes/dias-administrativos" class="sidebar-link">Días Administrativos</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--
+                <li class="sidebar-item">
+                    <a href="/solicitudes" class="sidebar-link">
+                        <i class="bi bi-calendar-check-fill"></i>
+                        <span >Solicitudes</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/docs" class="sidebar-link">
+                        <i class="bi bi-archive-fill"></i>
+                        <span >Documentos</span>
+                    </a>
+                </li>-->
+                <li class="sidebar-item">
+                    <a href="#documentosSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="sidebar-link dropdown-toggle">
+                        <i class="bi bi-archive-fill"></i>
+                        <span>Documentos</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="documentosSubmenu">
+                        <li class="sidebar-item">
+                            <a href="/docs/contrato" class="sidebar-link">Contrato</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/docs/anexo" class="sidebar-link">Anexo</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/docs/liquidaciones" class="sidebar-link">Liquidaciones</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/docs/carta-amonestaciones" class="sidebar-link">Amonestaciones</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/docs/certificados" class="sidebar-link">Certificados</a>
+                        </li>
+                    </ul>
+                </li>
+
+>>>>>>> 787c8c20f5660d5761d453c4411389d11c85cb2f
                 {% if user.is_authenticated %}
                 <li>
                     <a href="/logout"></a>
