@@ -28,11 +28,8 @@ urlpatterns = [
     path('miPerfil/', views.miPerfil, name='miPerfil'),
     path('verUsuario/', views.verUsuario, name='verUsuario'),
     path('editUsuario/', views.editUsuario, name='editUsuario'),
-<<<<<<< HEAD
     path('eliminarUser/', views.eliminarUser, name='eliminarUser'),
-    path('variables/', views.variables, name='variables')
-=======
+    path('variables/', views.variables, name='variables'),
     path('addUser/', views.addUser, name='addUser'),
     path('solicitudes/vacaciones/', views.vacaciones, name='solicitudes/vacaciones/')
->>>>>>> 787c8c20f5660d5761d453c4411389d11c85cb2f
 ]
