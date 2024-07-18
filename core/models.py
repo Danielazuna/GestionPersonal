@@ -69,3 +69,12 @@ class HistorialEmpleado(models.Model):
 
     class Meta:
         unique_together = ('RUT', 'fecha_contratacion')
+
+class Vacaciones(models.Model):
+    empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
+    fecha_inicio = models.DateField()
+    fecha_fin = models.DateField()
+    dias_tomados = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.empleado.nombre} {self.empleado.apellido} - {self.fecha_inicio} a {self.fecha_fin}"

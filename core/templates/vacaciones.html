@@ -1,0 +1,44 @@
+{% include 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<h2>Lista de Vacaciones</h2>
+
+</div>
+<img src='{% static "/img/icono.jpeg.png" %}'>
+</div>
+</div>
+<div class="card-body col-md-10">
+    <a href="/addVacaciones"><button type="button" class="btn btn-primary agr">Agregar Vacaciones</button></a>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Empleado</th>
+                <th scope="col">Fecha Inicio</th>
+                <th scope="col">Fecha Fin</th>
+                <th scope="col">Días Tomados</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vacacion in vacaciones %}
+            <tr>
+                <td>{{ vacacion.empleado.nombre }} {{ vacacion.empleado.apellido }}</td>
+                <td>{{ vacacion.fecha_inicio }}</td>
+                <td>{{ vacacion.fecha_fin }}</td>
+                <td>{{ vacacion.dias_tomados }}</td>
+                <td>
+                    <a href="/editVacaciones/{{ vacacion.id }}"><button type="button" class="btn btn-outline-dark opc"><i class="bi bi-pencil"></i></button></a>
+                    <a class="btn btn-outline-dark opc" href="/deleteVacaciones/{{ vacacion.id }}" role="button"><i class="bi bi-trash3-fill"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<strong style="color: rgba(15, 13, 13, 0.575); text-align: center;">Creado por Sistemas D.O.E</strong>
+
+{% endblock %}
