@@ -50,6 +50,9 @@ def verUsuario(request):
 def editUsuario(request):
     return render(request, 'editUsuario.html')
 
+def addUser(request):
+    return render(request,"addUser.html")
+
 def signout(request):
     logout(request)
     return redirect('signin')
@@ -72,3 +75,5 @@ def signin(request):
             login(request, user)
             return redirect('home')
 
+def vacaciones(request):
+    return render(request, 'vacaciones.html')
