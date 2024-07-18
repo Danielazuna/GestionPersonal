@@ -27,5 +27,7 @@ urlpatterns = [
     path('lista/', views.lista, name='lista'),
     path('miPerfil/', views.miPerfil, name='miPerfil'),
     path('verUsuario/', views.verUsuario, name='verUsuario'),
-    path('editUsuario/', views.editUsuario, name='editUsuario')
+    path('editUsuario/', views.editUsuario, name='editUsuario'),
+    path('eliminarUser/', views.eliminarUser, name='eliminarUser'),
+    path('variables/', views.variables, name='variables')
 ]

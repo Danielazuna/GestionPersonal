@@ -43,9 +43,15 @@ def miPerfil(request):
     miPerfil = Empleado.objects.last()
     return render(request, 'miPerfil.html', {'miPerfil':miPerfil })
 
+def eliminarUser(request):
+    eliminarUser = Empleado.objects.last()
+    return render(request, 'eliminarUser.html', {'eliminarUser':eliminarUser })
 
 def verUsuario(request):
     return render(request, 'usuarios.html')
+
+def variables(request):
+    return render(request, 'variables.html')
 
 def editUsuario(request):
     return render(request, 'editUsuario.html')
@@ -53,6 +59,7 @@ def editUsuario(request):
 def signout(request):
     logout(request)
     return redirect('signin')
+
 
 
 def signin(request):
